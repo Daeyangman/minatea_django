@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="utf-8">
+	<title>Minatea</title>
+	<meta content="" name="description">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<meta content="width=device-width" name="viewport">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	{% load staticfiles %}
+
+	<link href="{% static 'img/favicon.png' %}" rel="icon" type="{% static 'image/png' %}">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script%7CLato:300,400,700" rel="stylesheet">
+	<link href="{% static 'css/bootstrap-light.css' %}" rel="stylesheet">
+	<link id="pagestyle" href='{% static "css/theme-light.css" %}' rel="stylesheet">
+</head>
+
+<body data-offset="50" data-spy="scroll" data-target=".navbar">
+	<nav class="navbar navbar-fixed-top shadow" id='{% static "js-nav" %}'>
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-target="#myNavbar" data-toggle="collapse" type="button">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<a class="navbar-brand" href="#"> <img src="{% static 'img/logo_minatea.png' %}" alt="logo"> </a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li><a href="#home">home</a></li>
+					<li><a href="#products">products</a></li>
+					<li><a href="#about">about us</a></li>
+					<li><a href="#special">special</a></li>
+					<!-- <li><a href="#testimonials">testimonials</a></li> -->
+					<li><a href="#news">dessert</a></li>
+					<!-- <li><a href="#history">history</a></li> -->
+					<!-- <li><a href="#contact">contact</a></li> -->
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section class="home section image-slider" id="home">
+		<div class="home-slider text-center">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide" style="background: url('/static/img/slider/back.jpeg')";>
+					<img src="{% static 'img/logo_white.png' %}" alt="store logo">
+					<h2 class="home-slider-title-main">Lovely Dessert Brand</h2>
+					<div class="home-buttons text-center"> <a href="#products" class="btn btn-lg  btn-primary">our products</a> </div>
+					<a class="arrow bounce text-center" href="#products"> <span class="ti-mouse"></span> <span class="ti-angle-double-down"></span> </a>
+				</div>
+
+				<div class="swiper-slide" style="background:url('/static/img/slider/back1.jpeg')";>
+					<img src="{% static 'img/logo_white.png' %}" alt="store logo">
+					<h2 class="home-slider-title-main">Lovely Dessert Brand</h2>
+					<div class="home-buttons text-center"> <a href="#products" class="btn btn-lg  btn-primary">our products</a> </div>
+					<a class="arrow bounce text-center" href="#about"> <span class="ti-mouse"></span> <span class="ti-angle-double-down"></span> </a>
+				</div>
+
+			</div>
+			<div class="home-pagination"></div>
+			<div class="home-slider-next right-arrow-negative"> <span class="ti-arrow-right"></span> </div>
+			<div class="home-slider-prev left-arrow-negative"> <span class="ti-arrow-left"></span> </div>
+		</div>
+	</section>
+
+
+
+	<!-- afternoon dessert set-->
+	<section class="countdown" id="special">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h3 class="section-heading">special!</h3>
+				</div>
+
+				<div class="col-md-5">
+					<ul class="product-list product-list-vertical">
+						<li class="wow fadeInUp" data-wow-delay=".2s">
+							<span class="product-list-left pull-left">
+									<a>
+										<img alt="product image" class="product-list-primary-img" src="{% static 'img/afternoondessert_first.jpg' %}">
+										<img alt="product image" class="product-list-secondary-img" src="{% static 'img/afternoondessert_secon.jpg' %}">
+									</a>
+							</span>
+						</li>
+					</ul>
+				</div>
+
+				<div class="col-md-7 text-center">
+					<div class="countdown-container">
+						<h3 class="wow fadeInDown">미나티만의 특별한 애프터눈 티 디저트 세트</h3>
+
+						<p class="wow fadeInDown">매 주 바뀌는 Minatea의 애프터눈 티 디저트 세트는 목/금요일 이틀간 한정수량 제작 됩니다.
+<br>당신의 소중한 주말 따뜻한 티타임을 연출 할 수 있도록 할 Minatea의 애프터눈 티세트는
+신선한 seasonal 재료로 특별히 구성됩니다. 그 기회를 놓치지 마세요!
+<br><br><br><br><strong><h3>예약 기한 : 매주 수요일 늦은 저녁 12:00<h3></strong></p>
+
+						<!-- DATA COUNDOWN INJECTED BY JS -->
+						<ul id="countdown" class="countdown-counter wow fadeInUp"></ul>
+						<!-- / DATA COUNDOWN INJECTED BY JS -->
+
+						<span class="countdown-price h3 wow fadeInUp">$25.00</span>
+						<button type="button" class="btn btn-default add-item wow swing" data-image="{% static 'img/0F3A6937.jpg' %}" data-name="Chocolate desire [promo]" data-cost="420.00" data-id="9">
+							<span class="ti-shopping-cart"></span>예약하러 가기
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- afternoon dessert set -->
+	<!-- / CART WIDGET -->
+
+	<section class="section-min section product" id="products">
+		<div class="container overflow-hidden">
+			<div class="row">
+				<div class="col-md-12">
+					<h3 class="section-heading">Products</h3>
+				</div>
+				<div class="col-md-12">
+					<div class="product-list-slider">
+						<ul class="swiper-wrapper product-list product-list-vertical">
+							<!-- SINGLE ITEM -->
+							<li class="swiper-slide wow fadeInUp text-center" data-wow-delay=".2s">
+								<span class="product-list-left pull-left">
+									<a href="#" data-target="#product-01" data-toggle="modal">
+										<img alt="product image" class="product-list-primary-img" src="{% static 'img/macaron_product_1.jpg' %}">
+										<img alt="product image" class="product-list-secondary-img" src="{% static 'img/hey.jpeg' %}">
+									</a>
+								</span>
+
+								<a>
+									<span class="product-list-right pull-left">
+										<span class="product-list-name h3">내맘대로 골라먹는 <br>마카롱</span>
+										<span class="product-list-price">20% Sale off!</span>
+									</span>
+								</a>
+
+								<a href = "http://storefarm.naver.com/minatea/products/2233684792"><button type="button" class="btn btn-default">
+									<span class="ti-shopping-cart"></span>Go to buy
+								</button></a>
+							</li>
+							<!-- / SINGLE ITEM -->
+
+							<!-- SINGLE ITEM -->
+							<li class="swiper-slide wow fadeInUp text-center" data-wow-delay=".4s">
+								<span class="product-list-left pull-left">
+									<a href = "#" data-target = "#product-02" data-toggle = "modal">
+										<img alt="product image" class="product-list-primary-img" src="{% static 'img/macaron_detail.jpg' %}">
+										<img alt="product image" class="product-list-secondary-img" src="{% static 'img/macaron_s1.jpg' %}">
+									</a>
+								</span>
+
+								<a>
+									<span class="product-list-right pull-left">
+										<span class="product-list-name h3">마카롱 6&12구<br> 선물용 세트</span>
+										<span class="product-list-price">20% Sale off!</span>
+									</span>
+								</a>
+
+								<a href = "http://storefarm.naver.com/minatea/products/2233684737"><button type="button" class="btn btn-default">
+									<span class="ti-shopping-cart"></span>Go to buy
+								</button></a>
+							</li>
+							<!-- / SINGLE ITEM -->
+
+							<!-- SINGLE ITEM -->
+							<li class="swiper-slide wow fadeInUp text-center" data-wow-delay=".6s">
+								<span class="product-list-left pull-left">
+									<a href="#" data-target="#product-03" data-toggle="modal">
+										<img alt="product image" class="product-list-primary-img" src="{% static 'img/matchamuffin.jpg' %}">
+										<img alt="product image" class="product-list-secondary-img" src="{% static 'img/muffin_product_1_2.jpg' %}">
+									</a>
+								</span>
+
+								<a>
+									<span class="product-list-right pull-left">
+										<span class="product-list-name h3">내맘대로 골라먹는 <br>머핀</span>
+										<span class="product-list-price">20% Sale off!</span>
+									</span>
+								</a>
+
+								<a href = "http://storefarm.naver.com/minatea/products/2233684737"><button type="button" class="btn btn-default">
+									<span class="ti-shopping-cart"></span>Go to buy
+								</button></a>
+							</li>
+							<!-- / SINGLE ITEM -->
+
+							<!-- SINGLE ITEM -->
+							<li class="swiper-slide wow fadeInUp text-center" data-wow-delay=".8s">
+								<span class="product-list-left pull-left">
+									<a href="#" data-target="#product-04" data-toggle="modal">
+										<img alt="product image" class="product-list-primary-img" src="{% static 'img/muffin_6set.jpg' %}">
+										<img alt="product image" class="product-list-secondary-img" src="{% static 'img/muffin_product_1.jpg' %}">
+									</a>
+								</span>
+
+								<a>
+									<span class="product-list-right pull-left">
+										<span class="product-list-name h3">머핀3총사<br>선물 세트</span>
+										<span class="product-list-price">20% Sale off!</span>
+									</span>
+								</a>
+
+								<a href ="http://storefarm.naver.com/minatea/products/2233684792"><button type="button" class="btn btn-default">
+									<span class="ti-shopping-cart"></span>Go to buy
+								</button></a>
+							</li>
+							<!-- / SINGLE ITEM -->
+
+							<!-- SINGLE ITEM -->
+							<li class="swiper-slide text-center">
+								<span class="product-list-left pull-left">
+									<a href="#" data-target="#product-05" data-toggle="modal">
+										<img alt="product image" class="product-list-primary-img" src="{% static 'img/cookiesolo.jpg' %}">
+										<img alt="product image" class="product-list-secondary-img" src="{% static 'img/cookie3set.jpg' %}">
+									</a>
+								</span>
+
+								<a>
+									<span class="product-list-right pull-left">
+										<span class="product-list-name h3">고급 수제쿠키 선물세트<br> 2,3종</span>
+										<span class="product-list-price">20% sale off!!</span>
+									</span>
+								</a>
+
+								<button type="button" class="btn btn-default" >
+									<span class="ti-shopping-cart"></span>Go to buy
+								</button>
+							</li>
+							<!-- / SINGLE ITEM -->
+
+							<!-- SINGLE ITEM -->
+							<li class="swiper-slide text-center">
+								<span class="product-list-left pull-left">
+									<a href="#" data-target="#product-06" data-toggle="modal">
+										<img alt="product image" class="product-list-primary-img" src="{% static 'img/cookieset6_2.jpg' %}">
+										<img alt="product image" class="product-list-secondary-img" src="{% static 'img/cookieset6.jpg' %}">
+									</a>
+								</span>
+
+								<a>
+									<span class="product-list-right pull-left">
+										<span class="product-list-name h3">모든 맛을 한번에!<br>고급 선물세트 쿠키 6종</span>
+										<span class="product-list-price">20% sale off!!</span>
+									</span>
+								</a>
+
+								<button type="button" class="btn btn-default" >
+									<span class="ti-shopping-cart"></span>Go to buy
+								</button>
+							</li>
+							<!-- / SINGLE ITEM -->
+						</ul>
+
+						<!-- CAROUSEL CONTROLS -->
+						<div class="product-list-pagination text-center"></div>
+						<div class="product-list-slider-next right-arrow-negative">
+							<span class="ti-arrow-right"></span>
+						</div>
+
+						<div class="product-list-slider-prev left-arrow-negative">
+							<span class="ti-arrow-left"></span>
+						</div>
+						<!-- CAROUSEL CONTROLS -->
+					</div>
+				</div>
+			</div>
+			<!-- PRODUCT MODAL -->
+
+				<div class="modal fade product-modal" id="product-01" role="dialog" tabindex="-1">
+					<div class="modal-dialog">
+
+						<!-- MODAL CONTENT -->
+						<div class="modal-content shadow">
+							<a class="close" data-dismiss="modal"> <span class="ti-close"></span></a>
+							<div class="modal-body">
+								<!-- Wrapper for slides -->
+								<div class="carousel slide product-slide" id="product-carousel">
+									<!-- CAROSUEL SLIDER -->
+									<div class="carousel-inner cont-slider">
+										<div class="item active"> <img alt="" src="{% static 'img/macaron_1.jpg' %}" title=""> </div>
+										<div class="item"> <img alt="" src="{% static 'img/macaron_2.jpg' %}" title=""> </div>
+										<div class="item"> <img alt="" src="{% static 'img/macaron_3.jpg' %}" title=""> </div>
+										<div class="item"> <img alt="" src="{% static 'img/macaron_4.jpg' %}" title=""> </div>
+
+									</div>
+									<!-- / CAROSUEL SLIDER -->
+
+									<!-- CAROUSEL INDICATORS -->
+									<ol class="carousel-indicators">
+										<li class="active" data-slide-to="0" data-target="#product-carousel">
+											<img alt="" src="{% static 'img/macaron_1.jpg' %}">
+										</li>
+
+										<li class="" data-slide-to="1" data-target="#product-carousel">
+											<img alt="" src="{% static 'img/macaron_2.jpg' %}">
+										</li>
+
+										<li class="" data-slide-to="2" data-target="#product-carousel">
+											<img alt="" src="{% static 'img/macaron_3.jpg' %}">
+										</li>
+
+										<li class="" data-slide-to="3" data-target="#product-carousel">
+											<img alt="" src="{% static 'img/macaron_4.jpg' %}">
+										</li>
+									</ol>
+									<!-- / CAROUSEL INDICATORS -->
+								</div>
+
+								<!-- PRODUCT DESCRIPTION -->
+
+								</div>
+								<!-- / PRODUCT DESCRIPTION -->
+							</div>
+						</div>
+						<!-- / MODAL CONTENT -->
+					</div>
+					<div class="modal fade product-modal" id="product-02" role="dialog" tabindex="-1">
+						<div class="modal-dialog">
+
+							<!-- MODAL CONTENT -->
+							<div class="modal-content shadow">
+								<a class="close" data-dismiss="modal"> <span class="ti-close"></span></a>
+								<div class="modal-body">
+									<!-- Wrapper for slides -->
+									<div class="carousel slide product-slide" id="product-carousel1">
+										<!-- CAROSUEL SLIDER -->
+										<div class="carousel-inner cont-slider">
+											<div class="item active"> <img alt="" src="{% static 'img/macaron_2-1.jpg' %}" title=""> </div>
+											<div class="item"> <img alt="" src="{% static 'img/macaron2-3.jpg' %}" title=""> </div>
+											<div class="item"> <img alt="" src="{% static 'img/macaron2-13.jpg' %}" title=""> </div>
+											<div class="item"> <img alt="" src="{% static 'img/macaron2-4.jpg' %}" title=""> </div>
+
+										</div>
+										<!-- / CAROSUEL SLIDER -->
+
+										<!-- CAROUSEL INDICATORS -->
+										<ol class="carousel-indicators">
+											<li class="active" data-slide-to="0" data-target="#product-carousel1">
+												<img alt="" src="{% static 'img/macaron_2-1.jpg' %}">
+											</li>
+
+											<li class="" data-slide-to="1" data-target="#product-carousel1">
+												<img alt="" src="{% static 'img/macaron2-3.jpg' %}">
+											</li>
+
+											<li class="" data-slide-to="2" data-target="#product-carousel1' %}">
+												<img alt="" src="{% static 'img/macaron2-13.jpg' %}">
+											</li>
+
+											<li class="" data-slide-to="3" data-target="#product-carousel1">
+												<img alt="" src="{% static 'img/macaron2-4.jpg' %}">
+											</li>
+										</ol>
+										<!-- / CAROUSEL INDICATORS -->
+									</div>
+
+									<!-- PRODUCT DESCRIPTION -->
+
+									</div>
+									<!-- / PRODUCT DESCRIPTION -->
+								</div>
+							</div>
+							<!-- / MODAL CONTENT -->
+						</div>
+						<div class="modal fade product-modal" id="product-03" role="dialog" tabindex="-1">
+							<div class="modal-dialog">
+
+								<!-- MODAL CONTENT -->
+								<div class="modal-content shadow">
+									<a class="close" data-dismiss="modal"> <span class="ti-close"></span></a>
+									<div class="modal-body">
+										<!-- Wrapper for slides -->
+										<div class="carousel slide product-slide" id="product-carousel2">
+											<!-- CAROSUEL SLIDER -->
+											<div class="carousel-inner cont-slider">
+												<div class="item active"> <img alt="" src="{% static 'img/matcha.jpg' %}" title=""> </div>
+												<div class="item"> <img alt="" src="{% static 'img/redbin.jpg' %}" title=""> </div>
+												<div class="item"> <img alt="" src="{% static 'img/tirami.jpg' %}" title=""> </div>
+												<div class="item"> <img alt="" src="{% static 'img/muffinset.jpg' %}" title=""> </div>
+
+											</div>
+											<!-- / CAROSUEL SLIDER -->
+
+											<!-- CAROUSEL INDICATORS -->
+											<ol class="carousel-indicators">
+												<li class="active" data-slide-to="0" data-target="#product-carousel2">
+													<img alt="" src="{% static 'img/matcha.jpg' %}">
+												</li>
+
+												<li class="" data-slide-to="1" data-target="#product-carousel2">
+													<img alt="" src="{% static 'img/redbin.jpg' %}">
+												</li>
+
+												<li class="" data-slide-to="2" data-target="#product-carousel2">
+													<img alt="" src="{% static 'img/tirami.jpg' %}">
+												</li>
+
+												<li class="" data-slide-to="3" data-target="#product-carousel2">
+													<img alt="" src="{% static 'img/muffinset.jpg' %}">
+												</li>
+											</ol>
+											<!-- / CAROUSEL INDICATORS -->
+										</div>
+
+										<!-- PRODUCT DESCRIPTION -->
+
+										</div>
+										<!-- / PRODUCT DESCRIPTION -->
+									</div>
+								</div>
+								<!-- / MODAL CONTENT -->
+							</div>
+							<div class="modal fade product-modal" id="product-04" role="dialog" tabindex="-1">
+								<div class="modal-dialog">
+
+									<!-- MODAL CONTENT -->
+									<div class="modal-content shadow">
+										<a class="close" data-dismiss="modal"> <span class="ti-close"></span></a>
+										<div class="modal-body">
+											<!-- Wrapper for slides -->
+											<div class="carousel slide product-slide" id="product-carousel3">
+												<!-- CAROSUEL SLIDER -->
+												<div class="carousel-inner cont-slider">
+													<div class="item active"> <img alt="" src="{% static 'img/muffin_11.jpg' %}" title=""> </div>
+													<div class="item"> <img alt="" src="{% static 'img/muffin_12.jpg' %}" title=""> </div>
+													<div class="item"> <img alt="" src="{% static 'img/muffin_13.jpg' %}" title=""> </div>
+													<div class="item"> <img alt="" src="{% static 'img/muffin_14.jpg' %}" title=""> </div>
+
+												</div>
+												<!-- / CAROSUEL SLIDER -->
+
+												<!-- CAROUSEL INDICATORS -->
+												<ol class="carousel-indicators">
+													<li class="active" data-slide-to="0" data-target="#product-carousel3">
+														<img alt="" src="{% static 'img/muffin_11.jpg' %}">
+													</li>
+
+													<li class="" data-slide-to="1" data-target="#product-carousel3">
+														<img alt="" src="{% static 'img/muffin_12.jpg' %}">
+													</li>
+
+													<li class="" data-slide-to="2" data-target="#product-carousel3">
+														<img alt="" src="{% static 'img/muffin_13.jpg' %}">
+													</li>
+
+													<li class="" data-slide-to="3" data-target="#product-carousel3">
+														<img alt="" src="{% static 'img/muffin_14.jpg' %}">
+													</li>
+												</ol>
+												<!-- / CAROUSEL INDICATORS -->
+											</div>
+
+											<!-- PRODUCT DESCRIPTION -->
+
+											</div>
+											<!-- / PRODUCT DESCRIPTION -->
+										</div>
+									</div>
+									<!-- / MODAL CONTENT -->
+								</div>
+								<div class="modal fade product-modal" id="product-05" role="dialog" tabindex="-1">
+									<div class="modal-dialog">
+
+										<!-- MODAL CONTENT -->
+										<div class="modal-content shadow">
+											<a class="close" data-dismiss="modal"> <span class="ti-close"></span></a>
+											<div class="modal-body">
+												<!-- Wrapper for slides -->
+												<div class="carousel slide product-slide" id="product-carousel4">
+													<!-- CAROSUEL SLIDER -->
+													<div class="carousel-inner cont-slider">
+														<div class="item active"> <img alt="" src="{% static 'img/cookie2-1.jpg' %}" title=""> </div>
+														<div class="item"> <img alt="" src="{% static 'img/cookie2-2.jpg' %}" title=""> </div>
+														<div class="item"> <img alt="" src="{% static 'img/cookie2-3.jpg' %}" title=""> </div>
+														<div class="item"> <img alt="" src="{% static 'img/cookie2-4.jpg' %}" title=""> </div>
+
+													</div>
+													<!-- / CAROSUEL SLIDER -->
+
+													<!-- CAROUSEL INDICATORS -->
+													<ol class="carousel-indicators">
+														<li class="active" data-slide-to="0" data-target="#product-carousel4">
+															<img alt="" src="{% static 'img/cookie2-1.jpg' %}">
+														</li>
+
+														<li class="" data-slide-to="1" data-target="#product-carousel4">
+															<img alt="" src="{% static 'img/cookie2-2.jpg' %}">
+														</li>
+
+														<li class="" data-slide-to="2" data-target="#product-carousel4">
+															<img alt="" src="{% static 'img/cookie2-3.jpg' %}">
+														</li>
+
+														<li class="" data-slide-to="3" data-target="#product-carousel4">
+															<img alt="" src="{% static 'img/cookie2-4.jpg' %}">
+														</li>
+													</ol>
+													<!-- / CAROUSEL INDICATORS -->
+												</div>
+
+												<!-- PRODUCT DESCRIPTION -->
+
+												</div>
+												<!-- / PRODUCT DESCRIPTION -->
+											</div>
+										</div>
+										<!-- / MODAL CONTENT -->
+									</div>
+									<div class="modal fade product-modal" id="product-06" role="dialog" tabindex="-1">
+										<div class="modal-dialog">
+
+											<!-- MODAL CONTENT -->
+											<div class="modal-content shadow">
+												<a class="close" data-dismiss="modal"> <span class="ti-close"></span></a>
+												<div class="modal-body">
+													<!-- Wrapper for slides -->
+													<div class="carousel slide product-slide" id="product-carousel5">
+														<!-- CAROSUEL SLIDER -->
+														<div class="carousel-inner cont-slider">
+															<div class="item active"> <img alt="" src="{% static 'img/cookie6-1.jpg' %}" title=""> </div>
+															<div class="item"> <img alt="" src="{% static 'img/cookie6-2.jpg' %}" title=""> </div>
+															<div class="item"> <img alt="" src="{% static 'img/cookie6-3.jpg' %}" title=""> </div>
+															<div class="item"> <img alt="" src="{% static 'img/cookie6-4.jpg' %}" title=""> </div>
+
+														</div>
+														<!-- / CAROSUEL SLIDER -->
+
+														<!-- CAROUSEL INDICATORS -->
+														<ol class="carousel-indicators">
+															<li class="active" data-slide-to="0" data-target="#product-carousel5">
+																<img alt="" src="{% static 'img/cookie6-1.jpg' %}">
+															</li>
+
+															<li class="" data-slide-to="1" data-target="#product-carousel5">
+																<img alt="" src="{% static 'img/cookie6-2.jpg' %}">
+															</li>
+
+															<li class="" data-slide-to="2" data-target="#product-carousel5">
+																<img alt="" src="{% static 'img/cookie6-3.jpg' %}">
+															</li>
+
+															<li class="" data-slide-to="3" data-target="#product-carousel5">
+																<img alt="" src="{% static 'img/cookie6-4.jpg' %}">
+															</li>
+														</ol>
+														<!-- / CAROUSEL INDICATORS -->
+													</div>
+
+													<!-- PRODUCT DESCRIPTION -->
+
+													</div>
+													<!-- / PRODUCT DESCRIPTION -->
+												</div>
+											</div>
+											<!-- / MODAL CONTENT -->
+										</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="container-fluid about white-color no-padding" id="about">
+    <div class="about-background about-background-1 row no-margin">
+        <div class="col-md-6 about-black-box">
+        	<h3 class="section-heading">Minatea</h3>
+        	<p>호텔에서 즐기던 고급 애프터눈 티의 특별한 분위기를 당신이 있는 곳 어디에서든 즐길 수 있게 시작하고자 한 Minatea는 디저트 전문 수제 브랜드 입니다. 더 많은 분들이 함께했으면 하는 마음에서 두번의 애프터눈 티 디저트 세트를 크라우드 펀딩 방식으로 사전 런칭하고, 성공적으로 마무리했습니다. 런칭 전 고객들과의 소통을 바탕으로 드디어 정식 오픈하여 더욱 많은 분들과 만나길 기대하고 있습니다.</p>
+        	<a href="#products" class="btn btn-default">디저트 보러가기</a>
+        </div>
+        <div class="col-md-6"></div>
+    </div>
+
+    <div class="about-background about-background-2 row no-margin">
+        <div class="col-md-4 about-white-box col-md-offset-4">
+	        <h2 class="section-claim wow fadeInDown" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
+	        Minatea <br>
+	        	<span>친환경 , 신선식품 , 최고의 재료</span>
+	        </h2>
+
+        	<p>달콤한 디저트를 맛볼 때 우리는 걱정합니다, 이 달콤함이 건강을 해치지는 않을까, 좋은 재료가 쓰여진 걸까라고 생각하게 되기 마련입니다. Minatea는 찾아주시는 모든 분들이 안심할 수 있게 다음과 같이 약속합니다. 건강한 재료의 선별과 관리에 소홀하지 않으며 모든 제조과정에서 일체의 방부제를 포함한 유해 첨가물을 배제하겠습니다. 작은 부분일 수 있지만 전부가 될 수도 있는<br> <strong>모든 속재료 (퓨레, 앙금, 잼) 등을 파티쉐가 직접 만들겠습니다.</strong> </p>
+
+        	<a href="#products" class="btn btn-default">디저트 보러가기 </a>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+<style type = "text/css">
+p{
+	text-align: left
+}
+</style>
+    <div class="about-background about-background-3 row no-margin">
+        <div class="col-md-6 about-black-box col-md-offset-6">
+        	<h3 class="section-heading">Special!</h3>
+        	<p>다양한 디저트 종류에 어떤 선택을 해야할지 고민되거나
+						연령대나 상황에 따라 <br>선호하거나 선물하기 좋은 구성을 찾고자 할 때가 있습니다.
+						<br>Minatea는 항상 새롭고 알찬 구성의 디저트로 여러분들을 찾아갈 것입니다.
+					</p>
+
+        	<a href="#products" class="btn btn-default">디저트 보러가기</a>
+        </div>
+    </div>
+  </section>
+
+
+
+
+
+	<section class="post-list" id="news">
+		<div class="container overflow-hidden">
+			<div class="row">
+				<div class="col-md-12">
+					<h3 class="section-heading white-color">Minatea's Dessert</h3>
+				</div>
+
+				<div class="post-slider col-md-12">
+					<!-- NEWS CAROSUEL -->
+					<div class="swiper-wrapper">
+						<!-- SINGLE NEWS ITEM -->
+						<div class="swiper-slide">
+							<div class="post-entry wow fadeInUp">
+								<a href="#" data-toggle="modal" data-target="#post-01">
+									<span class="post-entry-cover" style="background-image:url('/static/img/salted.jpg')";>
+									</span>
+								</a>
+
+								<a class="h3 white-color" href="#" data-toggle="modal" data-target="#post-01">
+									솔티드 바닐라 마카롱
+								</a>
+								<a href="#" data-toggle="modal" data-target="#post-01" class="post-entry-more">
+									자세히 보기
+									<span class="ti-arrow-right icon"></span>
+								</a>
+							</div>
+						</div>
+						<!-- / SINGLE NEWS ITEM -->
+
+						<!-- SINGLE NEWS ITEM -->
+						<div class="swiper-slide">
+							<div class="post-entry wow fadeInUp">
+								<a href="#" data-toggle="modal" data-target="#post-02">
+									<span class="post-entry-cover" style="background-image:url('/static/img/hey.jpeg');">
+									</span>
+								</a>
+
+								<a class="h3 white-color" href="#" data-toggle="modal" data-target="#post-01">
+									헤이즐럿 프랄린 마카롱
+								</a>
+								<a href="#" data-toggle="modal" data-target="#post-02" class="post-entry-more">
+									자세히 보기
+									<span class="ti-arrow-right icon"></span>
+								</a>
+							</div>
+						</div>
+						<!-- / SINGLE NEWS ITEM -->
+
+						<!-- SINGLE NEWS ITEM -->
+						<div class="swiper-slide">
+							<div class="post-entry wow fadeInUp">
+								<a href="#" data-toggle="modal" data-target="#post-03">
+									<span class="post-entry-cover" style="background-image:url('/static/img/matchamacaron.jpeg');">
+									</span>
+								</a>
+
+								<a class="h3 white-color" href="#" data-toggle="modal" data-target="#post-01">
+									말차 마카롱
+								</a>
+								<a href="#" data-toggle="modal" data-target="#post-03" class="post-entry-more">
+									자세히 보기
+									<span class="ti-arrow-right icon"></span>
+								</a>
+							</div>
+						</div>
+						<!-- / SINGLE NEWS ITEM -->
+
+						<!-- SINGLE NEWS ITEM -->
+						<div class="swiper-slide">
+							<div class="post-entry wow fadeInUp">
+								<a href="#" data-toggle="modal" data-target="#post-04">
+									<span class="post-entry-cover" style="background-image:url('/static/img/matchamuffin.jpg');">
+									</span>
+								</a>
+
+								<a class="h3 white-color" href="#" data-toggle="modal" data-target="#post-01">
+									말차 크림치즈 머핀
+								</a>
+								<a href="#" data-toggle="modal" data-target="#post-04" class="post-entry-more">
+									자세히 보기
+									<span class="ti-arrow-right icon"></span>
+								</a>
+							</div>
+						</div>
+						<!-- / SINGLE NEWS ITEM -->
+
+						<!-- SINGLE NEWS ITEM -->
+						<div class="swiper-slide">
+							<div class="post-entry wow fadeInUp">
+								<a href="#" data-toggle="modal" data-target="#post-05">
+									<span class="post-entry-cover" style="background-image:url('/static/img/creamcheesemuffin.jpg');">
+									</span>
+								</a>
+
+								<a class="h3 white-color" href="#" data-toggle="modal" data-target="#post-01">
+									단팥 크림치즈 머핀
+								</a>
+								<a href="#" data-toggle="modal" data-target="#post-05" class="post-entry-more">
+									자세히 보기
+									<span class="ti-arrow-right icon"></span>
+								</a>
+							</div>
+						</div>
+						<!-- / SINGLE NEWS ITEM -->
+
+						<!-- SINGLE NEWS ITEM -->
+						<div class="swiper-slide">
+							<div class="post-entry wow fadeInUp">
+								<a href="#" data-toggle="modal" data-target="#post-06">
+									<span class="post-entry-cover" style="background-image:url('/static/img/cookies.jpg');">
+									</span>
+								</a>
+
+								<a class="h3 white-color" href="#" data-toggle="modal" data-target="#post-01">
+									미나티 쿠키 6종 세트
+								</a>
+								<a href="#" data-toggle="modal" data-target="#post-06" class="post-entry-more">
+									자세히 보기
+									<span class="ti-arrow-right icon"></span>
+								</a>
+							</div>
+						</div>
+						<!-- / SINGLE NEWS ITEM -->
+					</div>
+					<!-- / NEWS CAROSUEL -->
+
+					<!-- CAROUSEL CONTROLS -->
+					<div class="post-pagination text-center"></div>
+					<div class="post-slider-next right-arrow-negative">
+						<span class="ti-arrow-right"></span>
+					</div>
+
+					<div class="post-slider-prev left-arrow-negative">
+						<span class="ti-arrow-left"></span>
+					</div>
+					<!-- / CAROUSEL CONTROLS -->
+				</div>
+			</div>
+
+			<!-- NEWS MODAL -->
+			<div class="modal fade" id="post-01" role="dialog" tabindex="-1">
+				<div class="modal-dialog">
+					<!-- NEWS MODAL CONTENT -->
+					<div class="modal-content shadow">
+						<a class="close" data-dismiss="modal"> <span class="ti-close"></span></a>
+
+						<div class="modal-body">
+							<div class="post-entry post-entry-modal">
+								<h3 class="section-heading">단짠의 혁명! 솔티드 바닐라 마카롱 미나티 메인이되다?</h3>
+
+								<span class="post-entry-meta">
+									<img alt="user avatar" class="post-entry-author pull-left" src="{% static 'img/salted.jpg' %}">
+									<span class="post-entry-author-name pull-left"><h4>솔티드 바닐라 마카롱</h4></span>
+									<span class="post-entry-time pull-right">30명 이상 구매하였습니다.
+										<span class="post-entry-category">Minatea 마카롱 세트</span>
+									</span>
+								</span>
+
+								<span class="post-entry-cover" style="background-image:url('/static/img/macaron_detail.jpeg');"></span>
+
+								<p> 상품명:솔티드 바닐라마카롱<br> 구성 성분 : ~~ <br>칼로리 : ~~ kcal <br> </p><br>
+
+								<p>먹어도 먹어도 질리지 않는 그맛! 달아서 싫어요 한다면 이제는 짭쪼롭한 솔티드 바닐라 마카롱이 네 혀를 천국으로 보내준다!</p>
+
+								<p> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+								<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+							</div>
+						</div>
+					</div>
+					<!-- / NEWS MODAL CONTENT -->
+				</div>
+			</div>
+			<div class="modal fade" id="post-02" role="dialog" tabindex="-1">
+				<div class="modal-dialog">
+					<!-- NEWS MODAL CONTENT -->
+					<div class="modal-content shadow">
+						<a class="close" data-dismiss="modal"> <span class="ti-close"></span></a>
+
+						<div class="modal-body">
+							<div class="post-entry post-entry-modal">
+								<h4 class="section-heading">헤이즐럿의 깊은 향과 어울러진 프랄린 마카롱</h4>
+
+								<span class="post-entry-meta">
+									<img alt="user avatar" class="post-entry-author pull-left" src="{% static 'img/hey.jpeg' %}">
+									<span class="post-entry-author-name pull-left"><h4>헤이즐럿 프랄린 마카롱</h4></span>
+									<span class="post-entry-time pull-right">30명 이상 구매하였습니다.
+										<span class="post-entry-category">Minatea 마카롱 세트</span>
+									</span>
+								</span>
+
+								<span class="post-entry-cover" style="background-image:url('/static/img/macaron_detail.jpeg');"></span>
+
+								<p> 상품명:헤이즐럿 프랄린 마카롱 <br> 구성 성분 : ~~ <br>칼로리 : ~~ kcal <br> </p><br>
+
+								<p>먹어도 먹어도 질리지 않는 그맛! 달아서 싫어요 한다면 이제는 짭쪼롭한 솔티드 바닐라 마카롱이 네 혀를 천국으로 보내준다!</p>
+
+								<p> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+								<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+							</div>
+						</div>
+					</div>
+					<!-- / NEWS MODAL CONTENT -->
+				</div>
+			</div>
+			<!-- / NEWS MODAL -->
+			<div class="modal fade" id="post-03" role="dialog" tabindex="-1">
+				<div class="modal-dialog">
+					<!-- NEWS MODAL CONTENT -->
+					<div class="modal-content shadow">
+						<a class="close" data-dismiss="modal"> <span class="ti-close"></span></a>
+
+						<div class="modal-body">
+							<div class="post-entry post-entry-modal">
+								<h3 class="section-heading">녹진하고 달콤한 바로 그 맛! 말차 마카롱</h3>
+
+								<span class="post-entry-meta">
+									<img alt="user avatar" class="post-entry-author pull-left" src="{% static 'img/hey.jpeg' %}">
+									<span class="post-entry-author-name pull-left"><h4>말차 마카롱</h4></span>
+									<span class="post-entry-time pull-right">30명 이상 구매하였습니다.
+										<span class="post-entry-category">Minatea 마카롱 세트</span>
+									</span>
+								</span>
+
+								<span class="post-entry-cover" style="background-image:url('/static/img/macaron_detail.jpeg');"></span>
+
+								<p> 상품명:말차 마카롱 <br> 구성 성분 : ~~ <br>칼로리 : ~~ kcal <br> </p><br>
+
+								<p>먹어도 먹어도 질리지 않는 그맛! 달아서 싫어요 한다면 이제는 짭쪼롭한 솔티드 바닐라 마카롱이 네 혀를 천국으로 보내준다!</p>
+
+								<p> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+								<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+							</div>
+						</div>
+					</div>
+					<!-- / NEWS MODAL CONTENT -->
+				</div>
+			</div>
+			<!-- / NEWS MODAL -->
+			<div class="modal fade" id="post-04" role="dialog" tabindex="-1">
+				<div class="modal-dialog">
+					<!-- NEWS MODAL CONTENT -->
+					<div class="modal-content shadow">
+						<a class="close" data-dismiss="modal"> <span class="ti-close"></span></a>
+
+						<div class="modal-body">
+							<div class="post-entry post-entry-modal">
+								<h3 class="section-heading">속이 꽉찬 말차크림치즈 머핀 난리난당!!</h3>
+
+								<span class="post-entry-meta">
+									<img alt="user avatar" class="post-entry-author pull-left" src="{% static 'img/hey.jpeg' %}">
+									<span class="post-entry-author-name pull-left"><h4>말차크림치즈 머핀</h4></span>
+									<span class="post-entry-time pull-right">30명 이상 구매하였습니다.
+										<span class="post-entry-category">Minatea 머핀 세트 </span>
+									</span>
+								</span>
+
+								<span class="post-entry-cover" style="background-image:url('/static/img/muffinset.jpeg');"></span>
+
+								<p> 상품명:말차크림치즈 머핀 <br> 구성 성분 : ~~ <br>칼로리 : ~~ kcal <br> </p><br>
+
+								<p>먹어도 먹어도 질리지 않는 그맛! 달아서 싫어요 한다면 이제는 짭쪼롭한 솔티드 바닐라 마카롱이 네 혀를 천국으로 보내준다!</p>
+
+								<p> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+								<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+							</div>
+						</div>
+					</div>
+					<!-- / NEWS MODAL CONTENT -->
+				</div>
+			</div>
+			<!-- / NEWS MODAL -->
+			<div class="modal fade" id="post-05" role="dialog" tabindex="-1">
+				<div class="modal-dialog">
+					<!-- NEWS MODAL CONTENT -->
+					<div class="modal-content shadow">
+						<a class="close" data-dismiss="modal"> <span class="ti-close"></span></a>
+
+						<div class="modal-body">
+							<div class="post-entry post-entry-modal">
+								<h3 class="section-heading">12시간 직접 쑨 단팥 앙금과 크림치즈의 만남</h3>
+
+								<span class="post-entry-meta">
+									<img alt="user avatar" class="post-entry-author pull-left" src="{% static 'img/hey.jpeg' %}">
+									<span class="post-entry-author-name pull-left"><h4>레드빈 크림치즈 머핀</h4></span>
+									<span class="post-entry-time pull-right">30명 이상 구매하였습니다.
+										<span class="post-entry-category">Minatea 머핀 세트</span>
+									</span>
+								</span>
+
+								<span class="post-entry-cover" style="background-image:url('/static/img/muffinset.jpeg');"></span>
+
+								<p> 상품명:레드빈 크림치즈 머핀 <br> 구성 성분 : ~~ <br>칼로리 : ~~ kcal <br> </p><br>
+
+								<p>먹어도 먹어도 질리지 않는 그맛! 달아서 싫어요 한다면 이제는 짭쪼롭한 솔티드 바닐라 마카롱이 네 혀를 천국으로 보내준다!</p>
+
+								<p> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+								<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+							</div>
+						</div>
+					</div>
+					<!-- / NEWS MODAL CONTENT -->
+				</div>
+			</div>
+			<!-- / NEWS MODAL -->
+			<div class="modal fade" id="post-06" role="dialog" tabindex="-1">
+				<div class="modal-dialog">
+					<!-- NEWS MODAL CONTENT -->
+					<div class="modal-content shadow">
+						<a class="close" data-dismiss="modal"> <span class="ti-close"></span></a>
+
+						<div class="modal-body">
+							<div class="post-entry post-entry-modal">
+								<h3 class="section-heading">입소문 타고 난리난 수제 쿠키 6종세트!</h3>
+
+								<span class="post-entry-meta">
+									<img alt="user avatar" class="post-entry-author pull-left" src="{% static 'img/cookiesolo.jpg' %}">
+									<span class="post-entry-author-name pull-left"><h4>수제쿠키 6종세트 </h4></span>
+									<span class="post-entry-time pull-right">30명 이상 구매하였습니다.
+										<span class="post-entry-category">Minatea 수제쿠키 세트 </span>
+									</span>
+								</span>
+
+								<span class="post-entry-cover" style="background-image:url('/static/img/cookiesset.jpeg');"></span>
+
+								<p> 상품명:헤이즐럿 프랄린 마카롱 <br> 구성 성분 : ~~ <br>칼로리 : ~~ kcal <br> </p><br>
+
+								<p>먹어도 먹어도 질리지 않는 그맛! 달아서 싫어요 한다면 이제는 짭쪼롭한 솔티드 바닐라 마카롱이 네 혀를 천국으로 보내준다!</p>
+
+								<p> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+								<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+							</div>
+						</div>
+					</div>
+					<!-- / NEWS MODAL CONTENT -->
+				</div>
+			</div>
+			<!-- / NEWS MODAL -->
+		</div>
+	</section>
+
+	
+
+	<section id="contact" class="contact contact-with-map">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h3 class="section-heading white-color">contact</h3>
+				</div>
+				<div class="col-md-4">
+					<div class="contact-data">
+						<ul class="white-color">
+							<li><span class="ti-home icon"></span>경기 의왕 내손중앙 6길 77</li>
+							<li><span class="ti-mobile icon"></span>070 7769 1126, 평일 10:00-20:00</li>
+							<li><span class="ti-email icon"></span>minatea@minatea.com</li>
+							<li><a href="https://www.instagram.com/minatea001/" ><span class="ti-instagram icon"></span></a>minatea001</li>
+							<li><a href="http://youtube.com/"><span class="ti-youtube icon"></span></a>footage video</li>
+
+						</ul>
+					</div>
+				</div>
+				<!-- <div class="col-md-8 col-md-push-1"> -->
+					<!-- CONTACT FORM -->
+					<!-- <div class="contact-form">
+					<ul>
+
+					</ul> -->
+						<!-- <form>
+							<div class="form-group">
+								<input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+							</div>
+
+							<div class="form-group">
+								<input type="text" class="form-control" id="contact-email" name="contact-email" placeholder="Email" required>
+							</div>
+
+							<div class="form-group">
+								<input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile Number" required>
+							</div>
+
+							<div class="form-group">
+								<input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+							</div>
+
+							<div class="form-group">
+								<textarea class="form-control" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
+							</div>
+
+							<button type="button" type="button" id="submit" name="submit" class="btn btn-primary btn-lg text-center float-right">Submit your message</button>
+						</form> -->
+					<!-- </div> -->
+					<!-- / CONTACT FORM -->
+				<!-- </div>
+			</div>
+		</div> -->
+		<!-- GOOGLE MAP CONTAINER -->
+		<!-- <div class="google-maps">
+			<div id="map-canvas"></div>
+		</div> -->
+		<!-- / GOOGLE MAP CONTAINER -->
+	<!-- </section> -->
+
+	<!-- <div class="section section-min">
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-4 col-md-push-4 text-center"> <img class="footer-logo" src="{% static 'img/logo_black.png" alt="footer-logo">
+
+							</div>
+						</div>
+					</div> -->
+
+					<!-- <div class="col-md-12">
+						<div class="row">
+							<div class="col-md-4 col-md-offset-4 col-sm-12">
+								<div class="footer-newsletter">
+									<div class="center text-center">
+										<h4>stay tuned</h4>
+										<form action="#" method="post">
+											<div class="input-group">
+												<input class="form-control" type="text" placeholder="e-mail">
+												<span class="input-group-btn">
+													<button type="button" class="btn btn-default" type="button"><span class="ti-arrow-right"></span></button>
+												</span>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div> -->
+
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src='{% static "js/vendor/wow.js" %}'></script>
+	<script src='{% static "js/vendor/jquery-1.11.2.min.js" %}'></script>
+	<script src='{% static "js/vendor/swiper.min.js" %}'></script>
+	<script src='{% static "js/vendor/bootstrap.min.js" %}'></script>
+	<script src='{% static "js/vendor/jquery.countTo.js" %}'></script>
+	<script src='{% static "js/vendor/jquery.inview.js" %}'></script>
+	<script src='{% static "js/vendor/jquery.countdown.js" %}'></script>
+	<script src='{% static "js/tt-cart.js" %}'></script>
+	<script src='{% static "js/main.js" %}'></script>
+</body>
+</html>
